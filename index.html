@@ -78,7 +78,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.025em;margi
 .name{background:var(--raspberry);color:var(--ivory);padding-block:96px}
 .name .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
 .name .photo{border-radius:28px;overflow:hidden;aspect-ratio:4/5;max-width:460px;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
-.name .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+/* The photo is tall (816x1456) and always cropped top and bottom. 10% keeps the whole front fruit, crown included, in frame at both the desktop 4:5 and phone 5:4 crops. */
+.name .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
 .name .eyebrow{color:var(--blush)}
 .name h2{font-size:clamp(32px,4.2vw,48px);line-height:1.02;margin-top:12px}
 .reasons{display:grid;gap:28px;margin-top:36px}
